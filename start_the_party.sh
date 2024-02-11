@@ -122,7 +122,8 @@ install_emacs=${install_emacs:-N}
 if [[ "$install_emacs" == "Y" ]]; then
     echo "Installing Emacs Plus..."
     brew tap d12frosted/emacs-plus
-    brew install emacs-plus
+    # brew install emacs-plus
+    brew install emacs-plus --with-spacemacs-icon --with-native-comp
     ln -s /usr/local/Cellar/emacs-mac/*/Emacs.app/ /Applications
 
     # Install Spacemacs
