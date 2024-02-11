@@ -68,7 +68,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker mix macos ruby elixir golang python asdf)
+# plugins=(git docker mix macos ruby elixir golang python asdf)
+plugins=(git docker mix macos python asdf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -88,8 +89,8 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 
 ## rbenv
-eval "$(rbenv init -)"
-export PATH="$HOME/.rbenv/bin:$PATH"
+# eval "$(rbenv init -)"
+# export PATH="$HOME/.rbenv/bin:$PATH"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
