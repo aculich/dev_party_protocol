@@ -50,7 +50,7 @@ PACKAGES=(
     git
     ispell
     jq
-    kubernetes-cli
+    # kubernetes-cli
     ripgrep
     tree
     vim
@@ -69,10 +69,19 @@ CASKS=(
     postman
     google-chrome
     slack
-    spectacle
-    spotify
-    telegram
+    # spectacle
+    rectangle
+    # spotify
+    # telegram
     visual-studio
+
+    amethyst
+    bettermouse
+    contexts
+    karabiner-elements
+    rectangle
+    shottr
+    signal
 )
 
 echo "Installing cask apps..."
