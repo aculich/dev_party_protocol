@@ -131,59 +131,59 @@ if [[ "$install_emacs" == "Y" ]]; then
     cp dotfiles/.spacemacs ~/
 fi
 
-# Install Ruby
-read -p "Install Ruby [Y/N] (default N): " install_ruby
-install_ruby=${install_ruby:-N}
+# # Install Ruby
+# read -p "Install Ruby [Y/N] (default N): " install_ruby
+# install_ruby=${install_ruby:-N}
 
-if [[ "$install_ruby" == "Y" ]]; then
-    echo "Installing Asdf ruby plugin..."
-    asdf plugin add ruby
+# if [[ "$install_ruby" == "Y" ]]; then
+#     echo "Installing Asdf ruby plugin..."
+#     asdf plugin add ruby
 
-    echo "Installing Ruby latest version..."
-    asdf install ruby latest && asdf global ruby latest
-fi
+#     echo "Installing Ruby latest version..."
+#     asdf install ruby latest && asdf global ruby latest
+# fi
 
-# Install Elixir
-read -p "Install Elixir [Y/N] (default N): " install_elixir
-install_elixir=${install_elixir:-N}
+# # Install Elixir
+# read -p "Install Elixir [Y/N] (default N): " install_elixir
+# install_elixir=${install_elixir:-N}
 
-if [[ "$install_elixir" == "Y" ]]; then
-    echo "Installing Asdf elixir plugin..."
-    asdf plugin add elixir
+# if [[ "$install_elixir" == "Y" ]]; then
+#     echo "Installing Asdf elixir plugin..."
+#     asdf plugin add elixir
 
-    echo "Installing Elixir latest version..."
-    asdf install elixir latest && asdf global elixir latest
-fi
+#     echo "Installing Elixir latest version..."
+#     asdf install elixir latest && asdf global elixir latest
+# fi
 
-# Install Python
-read -p "Install Python [Y/N] (default N): " install_python
-install_python=${install_python:-N}
+# # Install Python
+# read -p "Install Python [Y/N] (default N): " install_python
+# install_python=${install_python:-N}
 
-if [[ "$install_python" == "Y" ]]; then
-    echo "Installing Asdf python plugin..."
-    asdf plugin add python
+# if [[ "$install_python" == "Y" ]]; then
+#     echo "Installing Asdf python plugin..."
+#     asdf plugin add python
 
-    echo "Installing Python3 latest version..."
-    asdf install python latest && asdf global python latest
+#     echo "Installing Python3 latest version..."
+#     asdf install python latest && asdf global python latest
 
-    echo "Install Poetry..."
-    brew install poetry
-fi
+#     echo "Install Poetry..."
+#     brew install poetry
+# fi
 
-# Install Golang
-read -p "Install Go [Y/N] (default N): " install_go
-install_go=${install_go:-N}
+# # Install Golang
+# read -p "Install Go [Y/N] (default N): " install_go
+# install_go=${install_go:-N}
 
-if [[ "$install_go" == "Y" ]]; then
-    echo "Installing Asdf go plugin..."
-    asdf plugin add golang
+# if [[ "$install_go" == "Y" ]]; then
+#     echo "Installing Asdf go plugin..."
+#     asdf plugin add golang
 
-    echo "Installing Go latest version..."
-    asdf install golang latest && asdf global golang latest
+#     echo "Installing Go latest version..."
+#     asdf install golang latest && asdf global golang latest
 
-    echo "Setting GO_ROOT..."
-    ~/.asdf/plugins/golang/set-env.zsh
-fi
+#     echo "Setting GO_ROOT..."
+#     ~/.asdf/plugins/golang/set-env.zsh
+# fi
 
 echo "Cleaning up..."
 brew cleanup
