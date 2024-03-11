@@ -85,7 +85,10 @@ CASKS=(
 )
 
 echo "Installing cask apps..."
-brew install --cask ${CASKS[@]}
+# brew install --cask ${CASKS[@]}
+## If any single cask fails to install then the rest silently fail,
+## so loop over each $CASKS item and install it by itself
+for i in ${CASKS[@]}; do brew install --cask $i; done
 
 echo "Exporting path..."
 export PATH=/usr/local/bin:$PATH
