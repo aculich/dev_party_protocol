@@ -46,7 +46,6 @@ brew tap homebrew/cask-fonts
 brew install --cask font-source-code-pro
 
 PACKAGES=(
-    asdf
     git
     ispell
     jq
@@ -56,32 +55,68 @@ PACKAGES=(
     vim
     zsh
     wget
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+    conda-zsh-completion
+    z
+    fzf
+    coreutils
+    findutils
+    gnu-tar
+    gnu-sed
+    gawk
+    gnutls
+    gnu-indent
+    gnu-getopt
+    grep
+    git
+    gnu-tar
+    ripgrep
+    pv
+    rename
+    telnet
+    watch
+    ascii
+    imagemagick
+    awscli
+    pandoc
 )
 
 echo "Installing base packages..."
 brew install ${PACKAGES[@]}
 
 CASKS=(
-    1password
-    alfred
+    # 1password
+    # alfred
     docker
     iterm2
-    postman
+    # postman
     google-chrome
     slack
     # spectacle
     rectangle
     # spotify
     # telegram
-    visual-studio
+    # visual-studio
+    visual-studio-code
+
 
     amethyst
+    anaconda
     bettermouse
     contexts
+    cyberduck
+    discord
+    firebase-admin
+    google-cloud-sdk
     karabiner-elements
+    mountain-duck
+    openvpn-connect
     rectangle
+    shortcutdetective
     shottr
     signal
+    visual-studio-code
 )
 
 echo "Installing cask apps..."
@@ -92,9 +127,6 @@ for i in ${CASKS[@]}; do brew install --cask $i; done
 
 echo "Exporting path..."
 export PATH=/usr/local/bin:$PATH
-
-echo "Adding ASDF to Zsh ..."
-echo -e "\n. $(brew --prefix asdf)/libexec/asdf.sh" >> ~/.zsh_profile
 
 echo "Installing Oh My Zsh..."
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
@@ -124,8 +156,8 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 # Show filename extensions by default
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
-echo "Creating folder structure..."
-[[ ! -d ~/Development ]] && mkdir ~/Development
+# echo "Creating folder structure..."
+# [[ ! -d ~/Development ]] && mkdir ~/Development
 
 # Install Emacs Plus
 read -p "Install Emacs Plus [Y/N] (default N): " install_emacs
@@ -144,6 +176,12 @@ if [[ "$install_emacs" == "Y" ]]; then
     git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
     cp dotfiles/.spacemacs ~/
 fi
+
+# brew install asdf
+# echo "Adding ASDF to Zsh ..."
+# echo -e "\n. $(brew --prefix asdf)/libexec/asdf.sh" >> ~/.zsh_profile
+
+
 
 # # Install Ruby
 # read -p "Install Ruby [Y/N] (default N): " install_ruby
